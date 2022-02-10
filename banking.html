@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <h1 class="text-5xl text-center mt-16">Let's get some<span class="font-semibold text-purple-600">
+    <h1 class="text-5xl text-center my-16">Let's get some<span class="font-semibold text-purple-600">
             moneeeeey!</span>!!!
     </h1>
-    <main>
+    <main class="w-3/4 mx-auto">
+        <!-- Balance and Transaction -->
         <section>
-            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+            <div class="grid grid-cols-3 gap-4">
                 <div class="bg-yellow-300 p-8 rounded">
                     <h3 class="text-white text-3xl">Deposit</h3>
-                    <h4 class="text-4xl text-white">$00.00</h4>
+                    <h4 class="text-4xl text-white">$<span id="deposit-total">0.00</span></h4>
                 </div>
                 <div class="bg-green-300 p-8 rounded">
                     <h3 class="text-white text-3xl">Withdraw</h3>
@@ -26,11 +27,35 @@
                 </div>
                 <div class="bg-blue-300 p-8 rounded">
                     <h3 class="text-white text-3xl">Balance</h3>
-                    <h4 class="text-4xl text-white">$1000</h4>
+                    <h4 class="text-4xl text-white">$<span id="balance-total">1000</span></h4>
+                </div>
+            </div>
+        </section>
+        <!--- Deposit and Withdraw --->
+        <section class="mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl my-4 text-center">Please Deposit</h3>
+                    <div>
+                        <input id="deposit-input" class="border block border-gray-400 rounded w-3/4 mx-auto mb-4 px-2"
+                            type="text" placeholder="Amount you want to deposit($)">
+                        <button id="deposit-button"
+                            class="bg-yellow-600 px-4 rounded mx-20 py-2 text-white">Deposit</button>
+                    </div>
+                </div>
+                <div class="bg-blue-100 p-8 rounded">
+                    <h3 class="text-2xl my-4 text-center">Please Withdraw</h3>
+                    <div>
+                        <input id="withdraw-input" class="border block border-gray-400 rounded w-3/4 mx-auto mb-4 px-2"
+                            type="text" placeholder="Amount you want to deposit($)">
+                        <button id="withdraw-button"
+                            class="bg-yellow-600 px-4 rounded mx-20 py-2 text-white">Withdraw</button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="banking.js"></script>
 </body>
 
 </html>
